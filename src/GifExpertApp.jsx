@@ -4,7 +4,7 @@ import { AddCategory, GifCategory } from "./components";
 
 export const GifExpertApp = ({setInputValue,inputValue}) => {
 
-  const [categories, setCategories] = useState(['One Punch'])
+  const [categories, setCategories] = useState([])
   
   const addCategory=(newCategory)=>{
     if(categories.includes(newCategory)) return;
@@ -14,9 +14,9 @@ export const GifExpertApp = ({setInputValue,inputValue}) => {
 
   return (
     <>
-      <h1> GIFS</h1>
-      <p> Buscá el Gif que más te gusta </p>
-      <AddCategory onNewCategory={addCategory}/>
+      <h1 className='title'> GIFS</h1>
+      <p className='parrafo'> Buscá el Gif que más te gusta </p>
+      <AddCategory className='nombre' onNewCategory={addCategory}/>
         {
           categories.map(category=>
           (

@@ -1,4 +1,4 @@
-const API_KEY=windowgit.API_KEY;
+const API_KEY=window.API_KEY;
 
 export const getGifs=async(category)=>{
   const url= `https://api.giphy.com/v1/gifs/search?api_key=${API_KEY}&q=${category}&limit=20`

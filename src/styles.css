@@ -1,21 +1,41 @@
 * {
   font-family: Helvetica, Arial, sans-serif;
-  background-color: rgb(234, 234, 234);
+  background-color: rgb(230, 187, 124);
 }
 
 body {
-  padding: 60px;
+  padding: 20px;
 }
 
 input {
   background-color: white;
   border-radius: 5px;
-  border: 1px solid rgb(97, 32, 158);
+  border: 1px solid rgb(219, 144, 45);
   color: black;
   font-size: 1.2rem;
   outline: none;
   padding: 10px 15px;
   width: 100%;
+  font-family: 'Crafty Girls', cursive;
+  font-family: 'Shadows Into Light', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Trocchi', serif;
+}
+
+.title{
+  font-family: 'Crafty Girls', cursive;
+  font-family: 'Shadows Into Light', cursive;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Trocchi', serif;
+  font-size: 5rem;
+  text-shadow: 4px 4px 4px #aaa;
+  text-align: center;
+  color:#FF3D00
+}
+
+p{
+  font-family: 'Crafty Girls','Source Sans Pro', sans-serif, cursive;
+  font-size: 30px;
 }
 
 h2 {
@@ -23,7 +43,8 @@ h2 {
 }
 
 h3 {
-  font-size: 3rem;
+  font-family: 'Trocchi','Crafty Girls','Shadows Into Light','Source Sans Pro',sans-serif, cursive;
+  font-size: 2.5rem;
   margin-bottom: 5px;
 }
 
@@ -60,4 +81,55 @@ h3 {
 
 .card img {
   width: 100%;
+}
+
+/* LOADER */
+.loader {
+  position: relative;
+  width: 120px;
+  height: 90px;
+  margin: 0 auto;
+}
+.loader:before {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #FF3D00;
+  animation: loading-bounce 0.5s ease-in-out infinite alternate;
+}
+.loader:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 7px;
+  width: 45px;
+  border-radius: 4px;
+  box-shadow: 0 5px 0 #fff, -35px 50px 0 #fff, -70px 95px 0 #fff;
+  animation: loading-step 1s ease-in-out infinite;
+}
+
+@keyframes loading-bounce {
+  0% { transform: scale(1, 0.7)}
+  40% { transform: scale(0.8, 1.2)}
+  60% { transform: scale(1, 1)}
+  100% { bottom: 140px }
+}
+@keyframes loading-step {
+  0% {
+    box-shadow: 0 10px 0 rgba(0,0,0,0),
+                0 10px 0 #fff,
+              -35px 50px 0 #fff,
+              -70px 90px 0 #fff;
+  }
+  100% {
+    box-shadow: 0 10px 0 #fff,
+              -35px 50px 0 #fff,
+              -70px 90px 0 #fff,
+              -70px 90px 0 rgba(0,0,0,0);
+  }
 }
